@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <title>Shape Matters</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header_nav"></nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <% if (Loggedin == false) { %>
+        <li>
+          <a href="/register">Register</a>
+        </li>
+        <li>
+          <a href="/login">Login</a>
+        </li>
+        <% } else { %>
+        <li>
+          <a href="/user">Dashboard</a>
+        </li>
+        <% } %>
+      </ul>
+    </header>
+
+    <div class="Post_Box">
+      <h1><%=post.authorsPost_title%></h1>
+      <h2>Date Published:<%= post.authorsPost_date %></h2>
+      <p><%= post.authorsPost_description %></p>
+      <p>Written by <%=post.authorsPost_author_name%></p>
+    </div>
+
+    <hr width="80%" />
+
+    <div class="Comments_Box">
+      <h1>Comments</h1>
+
+      <%if (comments.length>0) { %> <% comments.forEach(post => { %>
+
+      <p><%=post.comments%></p>
+      <% }) %> <%} else {%>
+      <p>No Comments for this post, Post your Comments!</p>
+
+      <% } %>
+    </div>
+
+    <div class="Comments_Box">
+      <form action="create_comment/<%=post.authorsPost_id%>" method="post">
+        <textarea class="input" name="input_comments">
+Enter Your Comments here!</textarea
+        >
+        <br />
+        <button type="submit" name="submitAction" value="submit">submit</button>
+      </form>
+    </div>
+  </body>
+</html>

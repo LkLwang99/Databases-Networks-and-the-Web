@@ -1,0 +1,76 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <title>Shape Matters</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="header_nav"></nav>
+    <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/user">Dashboard</a>
+        </li>
+    </ul>
+  </header>
+
+  <div class="createNewDraft">
+    <a href="/user/create_new_post">Create A Post</a>
+  </div>
+
+  
+  <div class="MainContent">
+    <section class="articles">
+      <h2 class="articles_headings">Published Posts</h2>
+      <ul class="article-ul">
+        <%if (rows.length>0) { %> 
+            <% rows.forEach(post => { %>
+        <li>
+          <div class="UserOptions">
+            <div class="UserOptionsChildText">
+              <a href="/post/<%=post.authorsPost_id%>">
+                <span><%=post.authorsPost_title%></span>
+                <span><%= post.authorsPost_date %></span>
+              </a>
+            </div>
+            <div class="UserOptionsChildButton">
+                <a class="functionalButtons buttonEdit" href="user/editpost/<%=post.authorsPost_id%>">edit</a>
+                <a class="functionalButtons buttonDelete" href="/user/deletepost/<%=post.authorsPost_id%>">delete</a>
+          </div>
+        </li>
+        <% }) %><%} else {%>
+            <span class="NoInput">You have no published Post yet!</span>
+            <% } %>
+      </ul>
+    </section>
+
+    <section class="articles">
+      <h2 class="articles_headings">Drafts</h2>
+      <ul class="article-ul">
+        <%if (draftRows.length>0) { %> <% draftRows.forEach(post => { %>
+        <li>
+          <div class="UserOptions">
+            <div class="UserOptionsChildText">
+              <a href="/user/viewdraftpost/<%=post.draft_id%>">
+                <span><%=post.draftpost_title%></span>
+                <span><%=post.draftpost_date %></span>
+              </a>
+            </div>
+            <div class="UserOptionsChildButton">
+              <a class="functionalButtons buttonEdit" href="user/editdraft/<%=post.draft_id%>">edit</a>
+              <a class="functionalButtons buttonDelete" href="user/deletedraft/<%=post.draft_id%>">delete</a>
+            </div>
+          </div>
+        </li>
+        <% }) %> <%} else {%>
+        <span class="NoInput">You have no Drafts!</span>
+        <% } %>
+      </ul>
+    </section>
+  </div>
+</body>

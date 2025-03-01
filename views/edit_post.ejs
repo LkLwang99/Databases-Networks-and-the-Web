@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <title>Shape Matters</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header_nav"></nav>
+      <ul>
+        <li>
+          <h1>Home</h1>
+        </li>
+        <li>
+          <a href="/user">Dashboard</a>
+        </li>
+      </ul>
+    </header>
+    <div class="createNewPostForm">
+      <form action="/user/update_post/<%= post.authorsPost_id%>" method="post">
+        <label for="draftpost_title">title</label><br />
+        <input
+          type="text"
+          id="draftpost_title"
+          size="100"
+          name="draftpost_title"
+          value="<%= post.authorsPost_title %>"
+        /><br />
+        <br />
+        <label for="draftpost_description">description</label>
+        <br />
+        <textarea
+          id="draftpost_description"
+          name="draftpost_description"
+          class="input"
+        >
+<%= post.authorsPost_description %> </textarea
+        >
+        <br />
+        <button type="submit" name="submitAction" value="submit">
+          submit changes
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

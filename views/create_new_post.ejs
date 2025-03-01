@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <title>Shape Matters</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header_nav"></nav>
+      <ul>
+          <li>
+          <a>Home</a>
+        </li>
+        <li>
+          <a href="/user">Dashboard</a>
+        </li>
+       
+      </ul>
+    </header>
+    <div class="createNewPostForm">
+      <form action="create_new_post" method="post">
+        <label for="draftpost_title">title</label><br />
+        <input type="text" id="draftpost_title" size="100" name="draftpost_title" /></input><br />
+        <br />
+        <label for="draftpost_description">description</label>
+        <br>
+        <textarea id="draftpost_description" name="draftpost_description" class="input">area </textarea>
+        <br>
+        <button type="submit" name="submitAction" value="submit">submit</button>
+        <button type="submit" name="submitAction" value="saveDraft">save</button>
+      </form>
+    </div>
+  </body>
+</html>
