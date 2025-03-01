@@ -1,0 +1,186 @@
+/* Reset default margin and padding */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.MainContent {
+  background-color: #aaa6a6;
+}
+/* Header styles */
+.header {
+  background-color: rgb(8, 8, 8);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation styles */
+.header_nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header_nav ul {
+  list-style-type: none;
+}
+
+.header_nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.header_nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header_nav li a:hover {
+  text-decoration: underline;
+}
+
+/* Home, About, Us, Login styles */
+.header ul {
+  list-style-type: none;
+}
+
+.header li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  font-size: 24px;
+  margin: 0;
+}
+
+.header a:hover {
+  color: aqua;
+}
+
+/* articles */
+
+/* Styling for the articles section */
+.articles {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 250px;
+  padding-right: 250px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+.articles_headings {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.article-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-ul a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.article-ul a:hover {
+  background-color: #f0f0f0;
+}
+
+.article-ul span {
+  display: block;
+}
+
+.article-list_date {
+  font-size: 20px;
+  color: #999;
+}
+
+.createNewPostForm {
+  padding-top: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+.UserOptions {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.UserOptionsChildText {
+  width: 400%;
+  height: auto;
+  flex-grow: 5;
+  display: block;
+}
+.UserOptionsChildButton {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.createNewDraft {
+  position: absolute;
+  left: 100px;
+  top: 100px; /* Adjust the top value as per your design */
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.createNewDraft a {
+  text-decoration: none;
+  color: white;
+}
+
+.createNewDraft a:hover {
+  color: lightgray;
+}
+
+.LoginBox {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+}
+
+.Registerbox {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+}
+
+.Post_Box {
+  padding-left: 250px;
+}
+
+.Comments_Box {
+  width: 100%;
+  padding-left: 250px;
+}
+
+.input {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
