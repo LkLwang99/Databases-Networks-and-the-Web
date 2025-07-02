@@ -51,19 +51,19 @@ global.db.run(`CREATE TABLE IF NOT EXISTS drafts (
 
 /* Run 2 */
 global.db.run(
-  `INSERT INTO authors (author_id,author_name, author_username, author_password) VALUES (2,"Timon Star", "Timonstar123", "Timonpassword123")`
+  `INSERT OR IGNORE INTO authors (author_id,author_name, author_username, author_password) VALUES (2,"Timon Star", "Timonstar123", "Timonpassword123")`
 );
 
 global.db.run(
-  `INSERT INTO authors (author_id,author_name, author_username, author_password) VALUES (1,"Simon Star", "Simonstar123", "Simonpassword123")`
+  `INSERT OR IGNORE INTO authors (author_id,author_name, author_username, author_password) VALUES (1,"Simon Star", "Simonstar123", "Simonpassword123")`
 );
 
 global.db.run(
-  `INSERT INTO authorsPosts (author_id, authorsPost_author_name, authorsPost_title, authorsPost_description, authorsPost_date) VALUES (1, "Simon Star", "ALorem Ipsum 123413251", "ALorem Ipsum 12304124", "2023-07-10")`
+  `INSERT OR IGNORE INTO authorsPosts (author_id, authorsPost_author_name, authorsPost_title, authorsPost_description, authorsPost_date) VALUES (1, "Simon Star", "ALorem Ipsum 123413251", "ALorem Ipsum 12304124", "2023-07-10")`
 );
 
 global.db.run(
-  `INSERT INTO drafts (draft_id, draftpost_author_id, draftpost_author_name, draftpost_title, draftpost_description,draftpost_date) VALUES (2,1,"Simon Star","","Lorep Ipsum","2023-07-10")`
+  `INSERT OR IGNORE INTO drafts (draft_id, draftpost_author_id, draftpost_author_name, draftpost_title, draftpost_description,draftpost_date) VALUES (2,1,"Simon Star","","Lorep Ipsum","2023-07-10")`
 );
 
 global.db.run(`CREATE TABLE IF NOT EXISTS comments (
