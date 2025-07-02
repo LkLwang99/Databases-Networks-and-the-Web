@@ -15,6 +15,8 @@
 *passport
     
 *passport-local
+
+
 To install all the node packages run ```npm install``` from the project directory
 
 
