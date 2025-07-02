@@ -12,9 +12,9 @@
     - Linux users: use a package manager eg. apt install
 * express-session
     
-*passport
+* passport
     
-*passport-local
+* passport-local
 
 
 To install all the node packages run ```npm install``` from the project directory
